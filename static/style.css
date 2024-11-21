@@ -145,3 +145,12 @@ body.loggedin {
   padding: 5px;
   margin: 0 0 10px 0;
 }
+
+.row.content{
+    height: 550px;
+}
+
+.sidenav{
+    background-color: #f1f1f1;
+    height: 100%;
+}
