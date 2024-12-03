@@ -56,7 +56,7 @@ function initializeCanvas()
 }
 
 /*
-// Function to show the mode selection menu
+// Function to show the mode selection menu. This code was so the game could run on it's own, and was unneeded after integration into site. 
 function showModeSelectionMenu() 
 {
     document.getElementById('mode-selection-menu').style.display = 'flex';
@@ -64,11 +64,11 @@ function showModeSelectionMenu()
 }
 */
 
-// Event listeners for mode buttons
+// Event listeners for mode buttons. Same as above!
 //document.getElementById('relaxed-mode-button').addEventListener('click', () => startGame('Relaxed'));
 //document.getElementById('survival-mode-button').addEventListener('click', () => startGame('Survival'));
 
-// Show the menu when the page loads without starting the game
+// Show the menu when the page loads without starting the game. Also same as above!
 //document.addEventListener('DOMContentLoaded', showModeSelectionMenu);
 
 /**
@@ -157,12 +157,14 @@ function nextRound()
 // Quit the game and return to the mode selection menu
 function quitGame() 
 {
-    // Hide game elements
+    // Hide game elements. This is hidden as it was unneeded for integration into website.
+    /*
     document.getElementById('feedback').textContent = "Waiting for game mode selection...";
     document.getElementById('next-round').style.display = 'none';
     document.getElementById('quit-button').style.display = 'none';
     document.getElementById('stopwatch').textContent = "0.00";
     document.getElementById('stopwatch-log').innerHTML = "";  // Clear the log
+    */
 
     // Reset core game variables
     currentRound = 1;
@@ -174,12 +176,15 @@ function quitGame()
     userInput = [];
     index = 0;
     activeCircles = [];
-
-    // Show the mode selection menu
-    document.getElementById('mode-selection-menu').style.display = 'flex';
     isPlaying = false;  // Ensure no ongoing game continues
 
-    console.log("Game quit and reset. Ready for new game mode selection.");
+    // Show the mode selection menu. Also hidden for integration purposes!
+    // document.getElementById('mode-selection-menu').style.display = 'flex';
+
+    console.log("Game quit and reset.");
+
+    //Right below here!
+    
 }
 
 /**
