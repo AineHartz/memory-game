@@ -55,18 +55,18 @@ function initializeCanvas()
     }
 }
 
-/*
-// Function to show the mode selection menu. This code was so the game could run on it's own, and was unneeded after integration into site. 
+
+// Function to show the mode selection menu. The game doesn't start with this anymore but still used for the quit button.
 function showModeSelectionMenu() 
 {
     document.getElementById('mode-selection-menu').style.display = 'flex';
     document.getElementById('feedback').textContent = "Waiting for game mode selection...";  // Update feedback
 }
-*/
 
-// Event listeners for mode buttons. Same as above!
-//document.getElementById('relaxed-mode-button').addEventListener('click', () => startGame('Relaxed'));
-//document.getElementById('survival-mode-button').addEventListener('click', () => startGame('Survival'));
+
+// Event listeners for mode buttons. 
+document.getElementById('relaxed-mode-button').addEventListener('click', () => startGame('Relaxed'));
+document.getElementById('survival-mode-button').addEventListener('click', () => startGame('Survival'));
 
 // Show the menu when the page loads without starting the game. Also same as above!
 //document.addEventListener('DOMContentLoaded', showModeSelectionMenu);
@@ -157,14 +157,14 @@ function nextRound()
 // Quit the game and return to the mode selection menu
 function quitGame() 
 {
-    // Hide game elements. This is hidden as it was unneeded for integration into website.
-    /*
+    // Hide game elements. 
+    
     document.getElementById('feedback').textContent = "Waiting for game mode selection...";
     document.getElementById('next-round').style.display = 'none';
     document.getElementById('quit-button').style.display = 'none';
     document.getElementById('stopwatch').textContent = "0.00";
     document.getElementById('stopwatch-log').innerHTML = "";  // Clear the log
-    */
+    
 
     // Reset core game variables
     currentRound = 1;
@@ -177,13 +177,13 @@ function quitGame()
     index = 0;
     activeCircles = [];
     isPlaying = false;  // Ensure no ongoing game continues
+    document.getElementById('mistake-display').style.display = 'none'
+    document.getElementById('points-display').style.display = 'none'
 
-    // Show the mode selection menu. Also hidden for integration purposes!
-    // document.getElementById('mode-selection-menu').style.display = 'flex';
+    //Show the mode selection menu. 
+    document.getElementById('mode-selection-menu').style.display = 'flex';
 
-    console.log("Game quit and reset.");
-
-    //Right below here!
+    console.log("Game quit and reset. Ready for new game mode selection.");
     
 }
 
